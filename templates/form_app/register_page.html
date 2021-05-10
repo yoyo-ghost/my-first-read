@@ -1,0 +1,10 @@
+{% extends "form_app/base.html" %}
+{% block title %}本入力画面{{ block.super }}{% endblock %}
+{% block content %}
+<form method = "POST"> <!--送信ボタン設置のためにformタグ追加-->
+  {% csrf_token %}
+    {{ insert_book.as_p }}
+  <input type = "submit" value = "本追加">
+</form>
+
+{% endblock %}
